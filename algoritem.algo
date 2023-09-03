@@ -1,0 +1,24 @@
+ALGORITHM count_words_and_vowels
+VAR
+   sentence : STRING
+   wordCount,  index : INTEGER
+   currentChar : CHARACTER
+
+BEGIN
+   wordCount := 0
+   index := 1
+   Read(sentence)
+
+   WHILE index <= Length(sentence) do
+       currentChar := sentence[index]
+
+       IF currentChar = ' ' then
+           wordCount := wordCount + 1
+       END_IF
+       index := index + 1
+   END_WHILE
+
+   wordCount := wordCount + 1
+
+   Write( wordCount)
+END
